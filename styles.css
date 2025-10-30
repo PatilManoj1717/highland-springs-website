@@ -18,8 +18,10 @@ body {
 /* === Header === */
 header {
   text-align: center;
-  padding-top: 30px;  /* slightly more top padding */
-  padding-bottom: 10px; /* tighter bottom gap */
+  padding-top: 30px;
+  /* slightly more top padding */
+  padding-bottom: 10px;
+  /* tighter bottom gap */
   position: relative;
 }
 
@@ -28,7 +30,8 @@ header::after {
   display: block;
   width: 100%;
   max-width: 600px;
-  margin: 10px auto 0; /* less margin below header line */
+  margin: 10px auto 0;
+  /* less margin below header line */
   height: 1px;
   background: rgba(255, 255, 255, 0.25);
 }
@@ -54,19 +57,22 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-top: 0; /* tighter overall layout */
+  margin-top: 0;
+  /* tighter overall layout */
 }
 
 /* Intro Section (Left-aligned) */
 .intro-section {
-  margin: 10px 0 15px; /* reduced top margin */
+  margin: 10px 0 15px;
+  /* reduced top margin */
   font-size: 0.88em;
   line-height: 1.6;
   text-align: left;
 }
 
 .intro-section p:first-of-type {
-  margin-bottom: 12px; /* increase spacing between the two lines */
+  margin-bottom: 12px;
+  /* increase spacing between the two lines */
 }
 
 
@@ -88,7 +94,8 @@ main {
 
 .steps {
   display: flex;
-  gap: 16px; /* slightly reduced gap */
+  gap: 16px;
+  /* slightly reduced gap */
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -99,11 +106,13 @@ main {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 10px;
-  padding: 14px; /* reduced height slightly */
+  padding: 14px;
+  /* reduced height slightly */
   color: white;
   transition: all 0.25s ease;
   cursor: pointer;
-  min-height: 50px; /* helps equal, shorter boxes */
+  min-height: 50px;
+  /* helps equal, shorter boxes */
 }
 
 .step-box:hover {
@@ -113,7 +122,8 @@ main {
 }
 
 .step-box h4 {
-  margin-bottom: 6px; /* tighter text layout */
+  margin-bottom: 6px;
+  /* tighter text layout */
 }
 
 .step-box p {
@@ -124,9 +134,11 @@ main {
 
 /* Download Section */
 .download-section {
-  margin-top: 20px;
+  margin-top: 25px;
+  margin-bottom: 10px; /* small gap below download buttons */
   text-align: center;
 }
+
 
 .download-section h3 {
   font-size: 1.15em;
@@ -160,6 +172,24 @@ main {
 
 .download-btn i {
   margin-right: 8px;
+}
+
+.contact-section {
+  text-align: center;
+  margin-top: 10px;  /* hugs download section closely */
+  margin-bottom: 30px; /* keeps good space before footer */
+  font-size: 0.9em;
+  color: #dbeafe;
+}
+
+.whatsapp-link {
+  color: #25D366;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.whatsapp-link:hover {
+  text-decoration: underline;
 }
 
 /* Footer */
