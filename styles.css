@@ -154,7 +154,7 @@ main {
 
 .button {
   background: rgba(255, 255, 255, 0.15);
-  color: #fff;
+  color: #25D366;
   padding: 12px 22px;
   border-radius: 25px;
   font-weight: 600;
@@ -171,6 +171,7 @@ main {
 
 .download-btn i {
   margin-right: 8px;
+  color: #25D366;
 }
 
 .contact-section {
