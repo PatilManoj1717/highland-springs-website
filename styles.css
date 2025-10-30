@@ -1,122 +1,182 @@
-/* Basic styling for the website */
+/* === Global === */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    line-height: 1.6;
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
+/* === Header === */
 header {
-    background-color: #1e3a8a; /* Blue color */
-    color: white;
-    padding: 30px 0;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding-top: 35px;
+  padding-bottom: 15px; /* reduced from 25px */
+  position: relative;
+}
+
+header::after {
+  content: "";
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 14px auto 0; /* reduced margin */
+  height: 1px;
+  background: rgba(255, 255, 255, 0.25);
 }
 
 header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+  font-size: 2.2em;
+  font-weight: 700;
+  margin-bottom: 4px;
 }
 
 header h2 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+  font-size: 1.1em;
+  font-weight: 400;
+  opacity: 0.9;
 }
 
-header p {
-    font-size: 1.2em;
-    color: white;
-    opacity: 0.9;
+/* === Main === */
+main {
+  width: 90%;
+  max-width: 750px;
+  margin: 0 auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-h2 {
-    font-size: 2em;
-    margin: 30px 0 15px 0;
+/* Intro Section (Left-aligned) */
+.intro-section {
+  margin: 10px 0 15px; /* reduced top margin */
+  font-size: 0.98em;
+  line-height: 1.6;
+  text-align: left;
 }
 
-p, li {
-    font-size: 1em;
-    color: #333; /* Default dark gray for all paragraphs and lists */
-    margin-bottom: 10px;
+.intro-section strong {
+  color: #fde68a;
 }
 
-ul {
-    padding-left: 25px;
-    margin-bottom: 15px;
+/* Steps Section */
+.flow-start {
+  margin-top: 10px;
+  text-align: center;
 }
 
-ul ul {
-    padding-left: 35px;
-    list-style-type: circle;
+.flow-start h3 {
+  font-size: 1.25em;
+  font-weight: 600;
+  margin-bottom: 18px;
 }
 
-a {
-    color: #2563eb;
-    text-decoration: none;
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-a:hover {
-    text-decoration: underline;
+.step-box {
+  flex: 1;
+  min-width: 280px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 18px 15px;
+  transition: all 0.3s ease;
+}
+
+.step-box:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.step-box h4 {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.step-box p {
+  font-size: 0.9em;
+  line-height: 1.4;
+  opacity: 0.95;
+}
+
+/* Download Section */
+.download-section {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.download-section h3 {
+  font-size: 1.15em;
+  margin-bottom: 12px;
+  font-weight: 500;
 }
 
 .button-group {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .button {
-    background-color: #2563eb;
-    color: white;
-    padding: 15px 25px;
-    text-align: center;
-    border-radius: 8px;
-    text-decoration: none;
-    display: inline-block;
-    font-weight: bold;
-    transition: background-color 0.3s;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: all 0.25s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .button:hover {
-    background-color: #1e40af;
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
 }
 
+.download-btn i {
+  margin-right: 8px;
+}
+
+/* Footer */
 footer {
-    background-color: #1f2937;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 50px;
+  text-align: center;
+  color: #dbeafe;
+  font-size: 0.8em;
+  padding-bottom: 18px;
 }
 
-/* Mobile responsive */
+footer p {
+  margin: 3px 0;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    .container {
-        padding: 15px;
-    }
-    
-    header h1 {
-        font-size: 2em;
-    }
-    
-    h2 {
-        font-size: 1.5em;
-    }
-    
-    .button-group {
-        flex-direction: column;
-    }
+  header h1 {
+    font-size: 1.8em;
+  }
+
+  .step-box {
+    min-width: 100%;
+  }
+
+  main {
+    width: 92%;
+  }
 }
