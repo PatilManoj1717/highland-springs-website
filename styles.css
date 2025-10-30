@@ -82,29 +82,30 @@ main {
 
 .steps {
   display: flex;
-  justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .step-box {
-  flex: 1;
-  min-width: 280px;
-  background: rgba(255, 255, 255, 0.1);
+  flex: 1 1 45%;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 12px;
-  padding: 18px 15px;
-  transition: all 0.3s ease;
+  border-radius: 10px;
+  padding: 18px;
+  color: white;
+  transition: all 0.25s ease;
+  cursor: pointer;
 }
 
 .step-box:hover {
-  background: rgba(255, 255, 255, 0.15);
-  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
 .step-box h4 {
-  font-size: 1.1em;
-  font-weight: 600;
   margin-bottom: 8px;
 }
 
