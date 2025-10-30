@@ -134,11 +134,10 @@ main {
 
 /* Download Section */
 .download-section {
-  margin-top: 25px;
-  margin-bottom: 10px; /* small gap below download buttons */
   text-align: center;
+  margin-top: 25px;
+  margin-bottom: 35px;
 }
-
 
 .download-section h3 {
   font-size: 1.15em;
@@ -176,10 +175,15 @@ main {
 
 .contact-section {
   text-align: center;
-  margin-top: 10px;  /* hugs download section closely */
+  margin-top: 35px;  /* hugs download section closely */
   margin-bottom: 30px; /* keeps good space before footer */
   font-size: 0.9em;
   color: #dbeafe;
+}
+
+.contact-section p:first-of-type {
+  margin-bottom: 5px;
+  /* increase spacing between the two lines */
 }
 
 .whatsapp-link {
