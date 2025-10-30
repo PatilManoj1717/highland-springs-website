@@ -18,8 +18,8 @@ body {
 /* === Header === */
 header {
   text-align: center;
-  padding-top: 35px;
-  padding-bottom: 15px; /* reduced from 25px */
+  padding-top: 30px;  /* slightly more top padding */
+  padding-bottom: 10px; /* tighter bottom gap */
   position: relative;
 }
 
@@ -28,7 +28,7 @@ header::after {
   display: block;
   width: 100%;
   max-width: 600px;
-  margin: 14px auto 0; /* reduced margin */
+  margin: 10px auto 0; /* less margin below header line */
   height: 1px;
   background: rgba(255, 255, 255, 0.25);
 }
@@ -53,16 +53,22 @@ main {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-top: 0; /* tighter overall layout */
 }
 
 /* Intro Section (Left-aligned) */
 .intro-section {
   margin: 10px 0 15px; /* reduced top margin */
-  font-size: 0.98em;
+  font-size: 0.88em;
   line-height: 1.6;
   text-align: left;
 }
+
+.intro-section p:first-of-type {
+  margin-bottom: 12px; /* increase spacing between the two lines */
+}
+
 
 .intro-section strong {
   color: #fde68a;
@@ -70,7 +76,7 @@ main {
 
 /* Steps Section */
 .flow-start {
-  margin-top: 10px;
+  margin-top: 8px;
   text-align: center;
 }
 
@@ -82,7 +88,7 @@ main {
 
 .steps {
   display: flex;
-  gap: 20px;
+  gap: 16px; /* slightly reduced gap */
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -93,10 +99,11 @@ main {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 10px;
-  padding: 18px;
+  padding: 14px; /* reduced height slightly */
   color: white;
   transition: all 0.25s ease;
   cursor: pointer;
+  min-height: 50px; /* helps equal, shorter boxes */
 }
 
 .step-box:hover {
@@ -106,7 +113,7 @@ main {
 }
 
 .step-box h4 {
-  margin-bottom: 8px;
+  margin-bottom: 6px; /* tighter text layout */
 }
 
 .step-box p {
