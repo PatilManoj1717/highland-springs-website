@@ -1,35 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tenant Registration – Highland Springs</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
   <header>
     <div class="container">
       <h1>Tenant Registration</h1>
+      <h2>Steps to Register on MyGate</h2>
     </div>
   </header>
 
   <main class="container">
-    <ol class="steps-list">
-      <li><strong>Owner must register first</strong></li>
-      <li><strong>Upload rent agreement</strong> (clear photo/scan)</li>
-      <li><strong>Owner marks flat as “let out”</strong></li>
-    </ol>
 
-    <div class="verification-box">
-      <h3>Verification</h3>
-      <p>Approval after document verification (24–48 h).</p>
-    </div>
+    <section class="flow-start">
+      <h3>Step-by-Step Guide</h3>
+      <ol class="steps-list">
+        <li><strong>Download</strong> the MyGate app</li>
+        <li><strong>Open the app</strong> → Follow steps in app</li>
+        <li><strong>Select</strong> → "Renting with family" option</li>
+        <li><strong>Upload document</strong></li>
+        <ol class="steps-list">
+          <li><strong>Rental Agreement</strong></li>
+          <li><strong>Police Verification</strong></li>
+          <li><strong>Photo ID</strong></li>
+        </ol>
+        <li><strong>Choose Occupancy Status</strong>
+          <ol class="steps-list">
+            <li><strong>Currently residing</strong></li>
+            <li><strong>Moving In</strong> – You must choose this option if you’re shifting into the flat for the first time. Otherwise, the security guard will not allow the moving vehicle carrying household items inside.</li>
+          </ol>
+        </li>
+        <li><strong>Submit Application</strong> & wait for approval</li>
+      </ol>
+    </section>
+
+    <section class="verification-box">
+      <h3>Verification Process</h3>
+      <p>Your request will be reviewed and approved within <strong>24–48 hours</strong> after document verification.</p>
+    </section>
+
+    <section class="download-section">
+      <h3>Download the MyGate App</h3>
+      <div class="button-group">
+        <a id="iosButton" href="http://apple.co/298mdqX" target="_blank" class="button download-btn">
+          <i class="fab fa-apple"></i> Download
+        </a>
+        <a id="androidButton" href="http://bit.ly/28Ybux1" target="_blank" class="button download-btn">
+          <i class="fab fa-android"></i> Download
+        </a>
+      </div>
+
+      <div class="contact-section">
+        <p class="contact-text">
+          Need help?
+        </p>
+        <p>
+          <a href="https://wa.me/919867071717" target="_blank" class="whatsapp-link">
+            Contact Ad hoc Committee
+          </a>
+        </p>
+      </div>
+    </section>
   </main>
 
   <footer>
     <div class="container">
-      <p>© 2025 Highland Springs</p>
+      <p>© 2025 Highland Springs. All rights reserved.</p>
+      <p>For support, contact community management.</p>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      const iosButton = document.getElementById("iosButton");
+      const androidButton = document.getElementById("androidButton");
+
+      if (/android/i.test(userAgent)) {
+        iosButton.style.display = "none";
+      } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        androidButton.style.display = "none";
+      }
+    });
+  </script>
 </body>
+
 </html>

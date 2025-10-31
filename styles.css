@@ -223,3 +223,36 @@ footer p {
     width: 92%;
   }
 }
+
+/* === Owner / Tenant Pages === */
+.steps-list {
+  margin: 15px 0 25px;
+  padding-left: 22px;
+  line-height: 1.7;
+  font-size: 0.95em;
+  text-align: left;
+}
+
+.steps-list li {
+  margin-bottom: 10px;
+}
+
+.verification-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 16px;
+  margin: 10px 0 25px;
+  text-align: left;
+}
+
+.verification-box h3 {
+  margin-bottom: 8px;
+  font-size: 1.1em;
+  color: #fde68a;
+}
+
+em {
+  color: #b91c1c; /* subtle red for importance */
+  font-weight: 600;
+}
