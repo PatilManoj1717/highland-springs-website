@@ -176,8 +176,10 @@ main {
 
 .contact-section {
   text-align: center;
-  margin-top: 35px;  /* hugs download section closely */
-  margin-bottom: 30px; /* keeps good space before footer */
+  margin-top: 35px;
+  /* hugs download section closely */
+  margin-bottom: 30px;
+  /* keeps good space before footer */
   font-size: 0.9em;
   color: #dbeafe;
 }
@@ -253,6 +255,7 @@ footer p {
 }
 
 em {
-  color: #b91c1c; /* subtle red for importance */
+  color: #b91c1c;
+  /* subtle red for importance */
   font-weight: 600;
 }
