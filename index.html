@@ -74,6 +74,7 @@
             <p>For support, contact community management.</p>
             <p class="visit-counter">
                 Total Visits: <span id="hs-counter">0</span>
+            </p>
         </div>
     </footer>
 
@@ -91,31 +92,34 @@
         });
     </script>
 
+    <!-- Global Visit Counter -->
     <script>
-        async function updateVisitCount() {
-            const site = 'highland-springs-mygate';
-            try {
-                // Increment
-                await fetch(`https://api.countapi.xyz/hit/${site}/visits`, {
-                    method: 'GET',
-                    mode: 'cors'
-                });
+        // Your FreeCounterStat ID
+        const COUNTER_ID = '6wb5kb5fhqw915njtjhrsx8xnt2rkgth'; // ← Replace with your real ID
 
-                // Get count
-                const res = await fetch(`https://api.countapi.xyz/get/${site}/visits`);
+        async function updateVisitCount() {
+            try {
+                // 1. Load counter script (increments +1)
+                const script = document.createElement('script');
+                script.src = `https://www.freecounterstat.com/c.php?c=${COUNTER_ID}`;
+                document.head.appendChild(script);
+
+                // 2. Get real count from API
+                const res = await fetch(`https://www.freecounterstat.com/api.php?c=${COUNTER_ID}`);
                 const data = await res.json();
 
-                document.getElementById('hs-counter').textContent =
-                    data.value.toLocaleString();
+                const el = document.getElementById('hs-counter');
+                if (el && data && data.count) {
+                    el.textContent = data.count.toLocaleString();
+                }
             } catch (e) {
+                console.log('Counter offline');
                 document.getElementById('hs-counter').textContent = '1+';
             }
         }
 
-        // Run on load
         window.addEventListener('load', updateVisitCount);
     </script>
-
 
 </body>
 
