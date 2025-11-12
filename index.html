@@ -49,7 +49,8 @@
                 <a id="iosButton" href="http://apple.co/298mdqX" target="_blank" class="button download-btn">
                     <i class="fab fa-apple"></i> Download
                 </a>
-                <a id="androidButton" href="https://play.google.com/store/apps/details?id=com.mygate.user" target="_blank" class="button download-btn">
+                <a id="androidButton" href="https://play.google.com/store/apps/details?id=com.mygate.user"
+                    target="_blank" class="button download-btn">
                     <i class="fab fa-android"></i> Download
                 </a>
             </div>
@@ -71,6 +72,8 @@
         <div class="container">
             <p>© 2025 Highland Springs. All rights reserved.</p>
             <p>For support, contact community management.</p>
+            <p class="visit-counter">
+                Total Visits: <span id="hs-counter">0</span>
         </div>
     </footer>
 
@@ -87,6 +90,32 @@
             }
         });
     </script>
+
+    <script>
+        async function updateVisitCount() {
+            const site = 'highland-springs-mygate';
+            try {
+                // Increment
+                await fetch(`https://api.countapi.xyz/hit/${site}/visits`, {
+                    method: 'GET',
+                    mode: 'cors'
+                });
+
+                // Get count
+                const res = await fetch(`https://api.countapi.xyz/get/${site}/visits`);
+                const data = await res.json();
+
+                document.getElementById('hs-counter').textContent =
+                    data.value.toLocaleString();
+            } catch (e) {
+                document.getElementById('hs-counter').textContent = '1+';
+            }
+        }
+
+        // Run on load
+        window.addEventListener('load', updateVisitCount);
+    </script>
+
 
 </body>
 

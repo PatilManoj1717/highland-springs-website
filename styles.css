@@ -259,3 +259,15 @@ em {
   /* subtle red for importance */
   font-weight: 600;
 }
+
+.visit-counter {
+  font-size: 0.9em;
+  color: #1e3a8a;
+  text-align: center;
+  margin-top: 5px;
+}
+
+#hs-counter {
+  font-weight: 700;
+  color: #1e40af;
+}
