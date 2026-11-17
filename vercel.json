@@ -1,0 +1,9 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/rulebook",
+      "destination": "/rulebook.html"
+    }
+  ]
+}
