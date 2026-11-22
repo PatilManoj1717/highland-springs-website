@@ -1,9 +1,3 @@
 {
-  "cleanUrls": true,
-  "rewrites": [
-    {
-      "source": "/rulebook",
-      "destination": "/rulebook.pdf"
-    }
-  ]
+  "cleanUrls": true
 }
